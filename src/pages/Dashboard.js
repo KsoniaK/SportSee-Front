@@ -10,6 +10,7 @@ import { getUser, getActivity, getAverageSessions, getPerformance } from "../ser
 import "../styles/main.css";
 import "../styles/dashboard.css";
 
+
 const Dashboard = () => {
   // id de l'utilisateur récupéré
   const { id } = useParams(); // retourne un objet / id est toujours une chaîne de caractères, même si c’est un nombre.
