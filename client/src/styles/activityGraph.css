@@ -1,0 +1,29 @@
+.activity-graph {
+  height: 320px;      /* hauteur FIXE */
+  background: #FBFBFB;
+  border-radius: 5px;
+  padding: 24px;
+  margin-bottom: 2rem;
+}
+.graphs-section{
+  width: 80%;
+  margin-right: 2rem;
+}
+.recharts-legend-wrapper{
+  bottom: 340px!important;
+  right: 60px;
+  top: -37px!important;
+}
+.activity-tooltip {
+  background-color: #e60000;
+  color: white;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none!important;
+}
+
+

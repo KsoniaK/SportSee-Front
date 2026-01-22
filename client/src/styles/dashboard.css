@@ -1,0 +1,22 @@
+.dashboard{
+  margin-left: 100px;
+  padding-top: 80px;
+}
+.dashboard-container{
+  display: flex;
+  width: 100%;
+}
+.graphs_display-flex{
+  display: flex;
+}
+.kpi-section{
+  width: 30%;
+}
+.graphs_display-flex{
+  justify-content: space-between;
+}
+/* Supprime toute bordure Recharts */
+.recharts-tooltip-wrapper {
+  border: none !important;
+  outline: none !important;
+}

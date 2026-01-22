@@ -1,0 +1,12 @@
+header{
+  margin-bottom: 5rem;
+}
+.main{
+  border: 2px solid red;
+  width: 75%;
+  margin-left: 18%;
+  margin-top: 3%;
+}
+.user-name{
+  color: red;
+}

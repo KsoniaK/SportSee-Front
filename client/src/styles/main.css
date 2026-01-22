@@ -1,0 +1,13 @@
+/* Dashboard.css ou global */
+.main-dashboard {
+  padding: 20px;
+  position: relative;
+  z-index: 1; /* pour que le contenu principal soit au-dessus du menu vertical */
+}
+
+/* Si tu as un nav vertical (navY) */
+.navY {
+  width: 100px; /* largeur du menu vertical */
+  height: 100%;
+  z-index: 0; /* derrière le contenu principal */
+}

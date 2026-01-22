@@ -1,0 +1,16 @@
+.kpi-card{
+  display: flex;
+  background-color: #FBFBFB;
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
+.card{
+  margin-left: 2rem;
+}
+.kpi-icon{
+  width: 30%;
+  height: 30%;
+}
+h3{
+  margin-top: 0;
+}

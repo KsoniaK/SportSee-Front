@@ -1,0 +1,60 @@
+.navX{
+  background-color: black;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+.navX a{
+  width: 10%;
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+}
+.navX p{
+  color: white;
+  font-weight: bold;
+}
+.navY {
+  background-color: black;
+  width: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-nav {
+  flex: 1;                      /* 🔥 prend l’espace dispo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;      /* 🔥 centrage vertical */
+  gap: 20px;
+}
+.logo_img{
+  width: 100%;
+}
+.copyright {
+  position: absolute;
+  bottom: 0;
+  left: 40px;              /* 🔥 clé du fix */
+}
+.copyright p {
+  transform: rotate(-90deg);
+  transform-origin: left top;
+  white-space: nowrap;
+  color: white;
+  font-size: 12px;
+}
+
+
+
+
