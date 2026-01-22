@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals'; // Outil de mesure de performan
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // il englobe toute l’application. grâce à lui : les routes dynamiques /user/:id , useParams() dans Dashboard et a navigation sans rechargement
-  <Router>
+  <Router basename="/SportSee-Front">
     <App />
   </Router>
 );

@@ -1,7 +1,6 @@
 // URL racine du backend pour toutes les routes
 // const BASE_URL = "http://localhost:3000/user/";
-// import { BASE_URL } from "./config";
-const BASE_URL = "https://sportsee-back.onrender.com/user/";
+import { BASE_URL } from "./config";
 
 export const getUser = async (id) => { // Appel HTTP GET vers : http://localhost:3000/user/12 (ou 18 ici)
   const response = await fetch(`${BASE_URL}${id}`); // fetch renvoie une promesse / await permet d’attendre la réponse
