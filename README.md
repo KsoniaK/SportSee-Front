@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="src/assets/logo-3.png" alt="Logo SportSee" width="100">
+</p>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
