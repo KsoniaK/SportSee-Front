@@ -29,7 +29,7 @@ A/ Front
 - The `yarn start` command will allow you to run the React project.
 
 C/ Back
-- GFork the repository git : https://github.com/KsoniaK/SportSee-Back.git 
+- Fork the repository git : https://github.com/KsoniaK/SportSee-Back.git 
 - The `yarn dev` command will allow you to run the micro API.
 
 ## 3. Endpoints
