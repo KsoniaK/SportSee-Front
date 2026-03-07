@@ -1,4 +1,3 @@
-import React from "react";
 import { // import de plusieurs composants de la librairie Recharts, utilisée pour créer les graphiques
   BarChart,
   Bar, // représente une série de données sous forme de barre

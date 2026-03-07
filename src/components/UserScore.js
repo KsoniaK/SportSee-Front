@@ -1,4 +1,3 @@
-import React from "react";
 import {
   RadialBarChart,
   RadialBar, // barre circulaire représentant une valeur
