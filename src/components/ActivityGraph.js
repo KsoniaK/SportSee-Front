@@ -69,7 +69,7 @@ function ActivityGraph({ data }) {
         >
           {/* Quadrillage horizontal uniquement (vertical={false}) avec des traits en pointillés (3 3) */}
           <CartesianGrid strokeDasharray="3 3" vertical={false}/>
-          {/* Axe horizontal / tickLine={false} et axisLine={false} : supprime les traits du tick et de l’axe */}
+          {/* Axe horizontal / {false} : supprime les traits du tick et de l’axe */}
           <XAxis dataKey="day" tickLine={false} axisLine={false}/> 
           {/* Axe vertical pour le Poids */}
           <YAxis
