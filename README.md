@@ -17,24 +17,19 @@ This repo contains all the source code to run the micro API for the sports analy
 
 ### 2.1 Prerequisites
 
-- [NodeJS (**version 12.18**)](https://nodejs.org/en/)
+- [NodeJS (**version 20.20.0**)](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/)
 
 If you are working with several versions of NodeJS, we recommend you install [nvm](https://github.com/nvm-sh/nvm). This tool will allow you to easily manage your NodeJS versions.
 
 ### 2.2 Launching the project
 
-A/ General
-- Fork the repository
-- Clone it on your computer.
-
-B/ Front
-- Go inside the "Front" repository. 
+A/ Front
+- Fork the repository. 
 - The `yarn start` command will allow you to run the React project.
 
 C/ Back
-- Go inside the "Back" repository.
-- The `yarn` command will allow you to install the dependencies.
+- GFork the repository git : https://github.com/KsoniaK/SportSee-Back.git 
 - The `yarn dev` command will allow you to run the micro API.
 
 ## 3. Endpoints
@@ -47,7 +42,6 @@ This project includes four endpoints that you will be able to use:
 - `http://localhost:3000/user/${userId}/activity` - retrieves a user's activity day by day with kilograms and calories.
 - `http://localhost:3000/user/${userId}/average-sessions` - retrieves the average sessions of a user per day. The week starts on Monday.
 - `http://localhost:3000/user/${userId}/performance` - retrieves a user's performance (energy, endurance, etc.).
-
 
 **Warning, currently only two users have been mocked. They have userId 12 and 18 respectively.**
 
