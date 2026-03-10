@@ -10,37 +10,43 @@ import {
 import "../styles/averageSessionsGraph.css";
 
 const AverageSessionsGraph = ({ data }) => {
-  if (!data || data.length === 0) return null; // Si data n’existe pas ou est vide = on n’affiche rien. évite les erreurs de rendu
+  // Si data n’existe pas ou est vide = on n’affiche rien. évite les erreurs de rendu
+  if (!data || data.length === 0) return null; 
+  
   const days = ["L", "M", "M", "J", "V", "S", "D"];
 
   // Recharts attend des données formatées
-  const chartData = data.map((item) => ({
+  const chartData = data.map((item) => ({ // data.map() crée un nouveau tableau, élément par élément (item).
     day: days[item.day - 1],
-    value: item.sessionLength, // durée de la session.
+    value: item.sessionLength, // durée de la session (sessionLength devient value)
   }));
 
   // on déclare un composant interne pour le tooltip
   const CustomTooltip = ({ active, payload }) => { // active : true quand on survole un point / payload : contient la valeur de la donnée survolée
-    if (active && payload && payload.length) { // vérification tooltip est actif + des données existent
+    // vérification tooltip est actif + des données existent
+    if (active && payload && payload.length) { 
       return (
         <div className="sessions-tooltip">
           {payload[0].value} min
         </div>
       );
     }
-    return null; // si pas de survol = on affiche rien
+    // si pas de survol = on affiche rien
+    return null; 
   };
 
   // Curseur sombre au survol (2e nuance de rouge)
   const CustomCursor = ({ points, width, height }) => {
-    const { x } = points[0]; // position horizontale du point survolé
-    return ( // on récupère la coordonnée X du point actif 
+    // position horizontale et vertical du point survolé
+    const { x, y } = points[0]; 
+    // on récupère la coordonnée X du point actif 
+    return ( 
       <Rectangle // on dessine un rectangle sombre semi-transparent
         fill="rgba(0, 0, 0, 0.1)"
         x={x}
-        y={0}
+        y={y - 100}
         width={width}
-        height={height}
+        height={height +200} // agrandissement du rectangle pour couvrir toute la colonne du graphique
       />
     );
   };

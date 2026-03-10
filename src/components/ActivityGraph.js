@@ -8,11 +8,21 @@ import { // import de plusieurs composants de la librairie Recharts, utilisée p
   Legend,
   ResponsiveContainer, // conteneur qui rend le graphique adaptatif à la taille de son parent
 } from "recharts";
-import CustomTooltipActivity from "./CustomTooltipActivity"; // importe un tooltip personnalisé
 import "../styles/activityGraph.css";
 
 function ActivityGraph({ data }) {
   if (!data) return null; // si data est null ou undefined, le composant ne retourne rien = éviter les erreurs
+
+  // on déclare un composant interne pour le tooltip
+  const CustomTooltipActivity = ({ active, payload }) => { // active : si true on survol une barre + payload : tableau contenant les données de la barre survolée, chaque entrée correspond à une série (Bar) du graphique
+    if (!active || !payload || payload.length < 2) return null; // si : tooltip n’est pas actif, ou payload n’existe pas, ou il y a moins de 2 valeurs = on affiche rien. Avec .length on veut être sûr que les deux valeurs (DES DEUX BARRES DONC !!) sont disponibles avant d’afficher le tooltip
+    return (
+      <div className="activity-tooltip">
+        <p>{payload[0].value}kg</p>
+        <p>{payload[1].value}kCal</p>
+      </div>
+    );
+  };
 
   // Légende personnalisée avec ronds
   const renderLegend = () => (

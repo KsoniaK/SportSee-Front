@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import Header from "../components/Header";
+import Header from "../layouts/Header";
 import KpiCards from "../components/KpiCards";
 import ActivityGraph from "../components/ActivityGraph";
 import AverageSessionsGraph from "../components/AverageSessionsGraph";
@@ -38,6 +38,11 @@ const Dashboard = () => {
       try {
         // Appelle /user/:id
         const user = await getUser(id);
+        if (!user.data) {
+        navigate("/404");
+        return; // arrête la suite du code si utilisateur inexistant
+        } 
+
         // Appelle /user/:id/activity
         const activity = await getActivity(id);
         const sessions = await getAverageSessions(id);
@@ -49,15 +54,16 @@ const Dashboard = () => {
         setActivityData(activity.data?.sessions || []);
         setSessionsData(sessions.data?.sessions || []);
         setPerformanceData(performance.data || null);
+
         // erreur API
       } catch (error) {
-        console.error(error);
+        navigate("/404");
       }
     };
 
     // on appelle fetchData, le useEffect se lance si id change
     fetchData();
-  }, [id]);
+  }, [id, navigate]);
 
   // Sécurité
   if (!userData) return <div>Chargement...</div>;

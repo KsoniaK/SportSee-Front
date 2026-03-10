@@ -33,10 +33,10 @@
   align-items: center;
 }
 .section-nav {
-  flex: 1;                      /* 🔥 prend l’espace dispo */
+  flex: 1;   /* prend l’espace dispo */
   display: flex;
   flex-direction: column;
-  justify-content: center;      /* 🔥 centrage vertical */
+  justify-content: center; /* centrage vertical */
   gap: 20px;
 }
 .logo_img{
@@ -45,7 +45,7 @@
 .copyright {
   position: absolute;
   bottom: 0;
-  left: 40px;              /* 🔥 clé du fix */
+  left: 40px; /* clé du fix */
 }
 .copyright p {
   transform: rotate(-90deg);

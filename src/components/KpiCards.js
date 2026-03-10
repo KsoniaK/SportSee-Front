@@ -5,8 +5,9 @@ import carbsIcon from "../assets/carbs-icon.png";
 import "../styles/kpiCards.css";
 
 const KpiCards = ({ data }) => {
-  // Si données par encore chargées (nul, undefined)
+  // Si données par encore chargées (nul, undefined) = le composant ne retourne rien = éviter les erreurs
   if (!data) return null;
+  
   return (
     <div className="kpi-cards">
       <div className="kpi-card">
