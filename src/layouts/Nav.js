@@ -13,7 +13,7 @@ function Nav() {
       <nav className="navX">
         <Link to="/"><img className="logo_img" src={logo} alt="logo" /></Link>
         <NavLink to="/">Accueil</NavLink>
-        <NavLink to="#">Profil</NavLink>
+        <NavLink to={"/"}>Profil</NavLink>
         <NavLink to="/404">Réglages</NavLink>
         <NavLink to="/404">Communauté</NavLink>
       </nav>

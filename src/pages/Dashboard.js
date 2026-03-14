@@ -22,6 +22,7 @@ const Dashboard = () => {
   const [sessionsData, setSessionsData] = useState([]);
   const [performanceData, setPerformanceData] = useState(null);
 
+  // Rq : useEffect = exécute les appels API
   // Redirection si id absent
   useEffect(() => { // Le hook se relance uniquement si l’ID change
     // sécurité, si url /user/undefined ou /user/ = renvoie accueil
